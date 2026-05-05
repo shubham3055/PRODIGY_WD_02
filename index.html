@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ultimate Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top-bar">
+    <h1>Stopwatch</h1>
+    <button onclick="toggleTheme()">🌗</button>
+  </div>
+
+  <div class="circle">
+    <svg width="200" height="200">
+      <circle cx="100" cy="100" r="90" class="bg"></circle>
+      <circle cx="100" cy="100" r="90" class="progress" id="progress"></circle>
+    </svg>
+    <div id="display">00:00:00:000</div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="start()">Start</button>
+    <button onclick="pause()">Pause</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="lap()">Lap</button>
+  </div>
+
+  <ul id="laps"></ul>
+
+</div>
+
+<!-- SOUND -->
+<audio id="clickSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
