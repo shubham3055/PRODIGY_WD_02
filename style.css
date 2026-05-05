@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  transition: 0.3s;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #f5f5f5;
+  color: black;
+}
+
+.container {
+  text-align: center;
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* CIRCLE */
+.circle {
+  position: relative;
+  margin: 20px auto;
+}
+
+svg {
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+.bg {
+  stroke: #444;
+}
+
+.progress {
+  stroke: #00f2fe;
+  stroke-dasharray: 565;
+  stroke-dashoffset: 565;
+  transition: 0.1s linear;
+}
+
+#display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+/* BUTTONS */
+.buttons button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttons button:hover {
+  background: #0072ff;
+}
+
+/* LAPS */
+#laps {
+  margin-top: 20px;
+  max-height: 120px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#laps li {
+  padding: 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
